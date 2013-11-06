@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    %title Kids Rock - the mouse garden
+    [{ stylesheet_link_tag(application) }]
+    
+  %body{:"ng-app" => 'app'}
+    #wrap
+      #summary
+        %h1 Kids Rock
+        %h2 Hier sind unsere Gruppen
+
+      #div{"ng-controller" => "KitaController"}
+        %p
+          {{ greeting() }}
+
+    %script{src: "/js/angular.min.js"}
+    %script{src: "/js/restangular.min.js"}
+
+    [{ javascript_include_tag(application) }]
+
+
